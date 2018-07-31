@@ -14,7 +14,7 @@ const params = {
 stream.on('follow', followed);
 
 function followed(event) {
-  console.log('Follow event is running');
+  console.log('Follow event is running..');
   const
     name = event.source.name,
     screenName = event.source.screen_name;
