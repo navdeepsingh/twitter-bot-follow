@@ -19,9 +19,6 @@ function followed(event) {
     name = event.source.name,
     screenName = event.source.screen_name;
 
-    console.log(event);
-    
-
     tweetNow(`@${screenName} Thank you for follow up 🙏.`, screenName);  
 }
 
@@ -35,7 +32,10 @@ function tweetNow(tweetTxt, scrName) {
   const now = date + ' ' + time;
 
   T.post('statuses/update', tweet, function (error, data, response) {
-    if (error) throw error;
+    if (error) {
+      console.log(error);      
+      throw error;
+    }
     console.log(`Gratitude shown successfully to @${scrName} at ${now}`);
   })
 }
