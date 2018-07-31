@@ -19,9 +19,7 @@ function followed(event) {
     name = event.source.name,
     screenName = event.source.screen_name;
 
-  if (screenName !== 'nswebstudio') {  
     tweetNow(`@${screenName} Thank you for follow up 🙏.`, screenName);  
-  }
 }
 
 function tweetNow(tweetTxt, scrName) {
