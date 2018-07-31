@@ -19,6 +19,9 @@ function followed(event) {
     name = event.source.name,
     screenName = event.source.screen_name;
 
+    console.log(event);
+    
+
     tweetNow(`@${screenName} Thank you for follow up 🙏.`, screenName);  
 }
 
